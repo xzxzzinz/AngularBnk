@@ -1,0 +1,25 @@
+<div class="container">
+    <h3>BookList</h3>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of result">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.prices}}</td>
+                <td>
+                    <a [routerLink]="[ '/httptest',item.id ]">
+                        <button type="button" class="btn btn-info">Details</button>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

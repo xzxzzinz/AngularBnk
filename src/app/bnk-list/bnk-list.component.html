@@ -1,0 +1,25 @@
+<div class="container">
+    <h3>BNK Members: {{username}}</h3>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of Bnks">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.age}}</td>
+                <td>
+                    <a [routerLink]="[ '/bnk', item.id ]">
+                        <button type="button" class="btn btn-info">Details</button>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

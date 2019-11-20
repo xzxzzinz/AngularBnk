@@ -1,0 +1,22 @@
+<div class="container" *ngIf="book">
+  <p>รายละเอียดหนังสือ</p>
+  <div class="col-12">
+    <div class="col-3" >
+      <img class="rounded"
+        src="{{book.pic}}"
+        class="rounded float-left" width="200" height="200" alt="...">
+    </div>
+    <div class="col-9">
+      <h3>ID: {{book.id}}</h3>
+      <h3>Name: {{book.name}}</h3>
+      <div class="row">
+        <h3> Details: </h3>
+        <p> {{book.details}}
+        </p>
+      </div>
+      <h3>Prices: {{book.prices}}</h3>
+      <button type="button" class="btn btn-warning">Edit</button>
+      <button type="button" class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container" *ngIf="bnk">
+    <p>รายละเอียดMember</p>
+    <div class="col-12">
+        <div class="col-3">
+            <img class="rounded" src="{{bnk.pic}}" class="rounded float-left" width="200" height="200" alt="...">
+        </div>
+        <div class="col-9">
+            <h3>ID: {{bnk.id}}</h3>
+            <h3>Name: {{bnk.name}}</h3>
+            <div class="row">
+                <h3> Details: </h3>
+                <p> {{bnk.details}}
+                </p>
+            </div>
+            <h3>Age: {{bnk.age}}</h3>
+            <button type="button" class="btn btn-warning" [routerLink]="[ '/bnk/edit',bnk.id]">Edit</button>
+            <button type="button" class="btn btn-danger" (click)="bnkdeletefuntion(bnk.id)">Delete</button>
+        </div>
+    </div>
+</div>
